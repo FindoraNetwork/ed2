@@ -1,0 +1,19 @@
+[package]
+name = "ed"
+version = "0.1.6"
+authors = ["Matt Bell <mappum@gmail.com>"]
+edition = "2018"
+description = "Encode and Decode traits"
+license = "MIT"
+
+[dependencies]
+failure = "0.1.8"
+seq-macro = "0.1.5"
+ed-derive = "0.1.1"
+
+[profile.bench]
+lto = true
+
+[profile.release]
+lto = true
+
