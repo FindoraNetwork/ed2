@@ -12,13 +12,16 @@
 
 [package]
 edition = "2018"
-name = "ed"
+name = "ed2"
 version = "0.1.6"
 authors = ["Matt Bell <mappum@gmail.com>"]
 description = "Encode and Decode traits"
 license = "MIT"
 [profile.bench]
 lto = true
+
+[lib]
+doctest = false
 
 [profile.release]
 lto = true

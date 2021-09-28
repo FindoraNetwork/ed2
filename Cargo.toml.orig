@@ -1,5 +1,5 @@
 [package]
-name = "ed"
+name = "ed2"
 version = "0.1.6"
 authors = ["Matt Bell <mappum@gmail.com>"]
 edition = "2018"

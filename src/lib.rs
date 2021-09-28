@@ -1,4 +1,4 @@
-//! *`ed` is a minimalist crate for deterministic binary encodings.*
+//! *`ed2` is a minimalist crate for deterministic binary encodings.*
 //!
 //! ## Overview
 //!
@@ -7,15 +7,15 @@
 //! many built-in Rust types. It also provides derive macros so that `Encode`
 //! and `Decode` can be easily derived for structs.
 //!
-//! `ed` is far simpler than `serde` because it does not attempt to create an
+//! `ed2` is far simpler than `serde` because it does not attempt to create an
 //! abstraction which allows arbitrary kinds of encoding (JSON, MessagePack,
 //! etc.), and instead forces focuses on binary encodings. It is also
 //! significantly faster than [`bincode`](https://docs.rs/bincode), the leading
 //! binary `serde` serializer.
 //!
-//! One aim of `ed` is to force top-level type authors to design their own
+//! One aim of `ed2` is to force top-level type authors to design their own
 //! encoding, rather than attempting to provide a one-size-fits-all encoding
-//! scheme. This lets users of `ed` be sure their encodings are as effiient as
+//! scheme. This lets users of `ed2` be sure their encodings are as effiient as
 //! possible, and makes it easier to understand the encoding for compatability
 //! in other languages or libraries (contrasted with something like `bincode`,
 //! where it is not obvious how a type is being encoded without understanding
@@ -28,9 +28,9 @@
 //! ## Usage 
 //!
 //! ```rust
-//! use ed::{Encode, Decode};
+//! use ed2::{Encode, Decode};
 //!
-//! # fn main() -> ed::Result<()> {
+//! # fn main() -> ed2::Result<()> {
 //! // traits are implemented for built-in types
 //! let bytes = 123u32.encode()?; // `bytes` is a Vec<u8>
 //! let n = u32::decode(bytes.as_slice())?; // `n` is a u32
@@ -74,7 +74,7 @@ use std::io::{Read, Write};
 
 pub use ed_derive::*;
 
-/// A Result bound to the standard `ed` error type.
+/// A Result bound to the standard `ed2` error type.
 pub type Result<T> = std::result::Result<T, failure::Error>;
 
 /// A trait for values that can be encoded into bytes deterministically.
