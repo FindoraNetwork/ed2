@@ -20,13 +20,14 @@ license = "MIT"
 [profile.bench]
 lto = true
 
+[dependencies]
+ed2-derive = { git = "https://github.com/FindoraNetwork/ed2-derive.git", branch = "main" }
+
 [lib]
 doctest = false
 
 [profile.release]
 lto = true
-[dependencies.ed-derive]
-version = "0.1.1"
 
 [dependencies.failure]
 version = "0.1.8"

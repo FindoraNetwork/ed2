@@ -72,7 +72,7 @@ use failure::{bail, format_err};
 use seq_macro::seq;
 use std::io::{Read, Write};
 
-pub use ed_derive::*;
+pub use ed2_derive::*;
 
 /// A Result bound to the standard `ed2` error type.
 pub type Result<T> = std::result::Result<T, failure::Error>;
