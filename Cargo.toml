@@ -17,11 +17,14 @@ version = "0.1.6"
 authors = ["Matt Bell <mappum@gmail.com>"]
 description = "Encode and Decode traits"
 license = "MIT"
+readme = "README.md"
+repository = "https://github.com/FindoraNetwork/ed2"
+exclude = [".*"]
 [profile.bench]
 lto = true
 
 [dependencies]
-ed2-derive = { git = "https://github.com/FindoraNetwork/ed2-derive.git", branch = "main" }
+ed2-derive = "0.1.1"
 
 [lib]
 doctest = false
